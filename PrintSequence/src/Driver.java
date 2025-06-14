@@ -30,6 +30,7 @@ public class Driver {
 
        try {
             Thread.sleep(10000);
+            System.out.println();
        } catch (Exception e) {
             e.printStackTrace();
        }
@@ -43,9 +44,9 @@ public class Driver {
         System.out.println("Calling Semaphore Implementation");
 
         List<Runnable> ltRunnablesSem = List.of(
-            createTask(()->{objSync.printAOnConsole(printRes);}, 1000),
-            createTask(()->{objSync.printBOnConsole(printRes);}, 20),
-            createTask(()->{objSync.printCOnConsole(printRes);}, 3000)
+            createTask(()->{objSem.printAOnConsole(printRes);}, 1000),
+            createTask(()->{objSem.printBOnConsole(printRes);}, 20),
+            createTask(()->{objSem.printCOnConsole(printRes);}, 3000)
         );
 
 
